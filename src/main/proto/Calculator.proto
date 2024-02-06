@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "com.example.demo.knowledge.proto";
+
+service Calculator {
+    rpc Add (AdditionRequest) returns (AdditionReply);
+}
+
+message AdditionRequest {
+    int32 added = 1;
+    int32 add = 2;
+}
+
+message AdditionReply {
+    int32 result = 1;
+}
